@@ -1,2 +1,5 @@
-#include "GameHeader.hpp"
+#include "Game.hpp"
 
+void Game::Reset() {
+
+}

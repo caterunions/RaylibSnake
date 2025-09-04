@@ -29,7 +29,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameHeader.hpp">
+    <ClInclude Include="Game.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Snake.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

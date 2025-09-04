@@ -17,6 +17,8 @@ int main()
 
     SetTargetFPS(60);
 
+    InitGame();
+
     while (!WindowShouldClose()) {
         Update();
 
@@ -41,5 +43,5 @@ void Draw() {
 }
 
 void InitGame() {
-
+    GameInstance = { 0 };
 }
