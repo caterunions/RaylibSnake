@@ -3,12 +3,13 @@
 #include <iostream>
 #include <raylib.h>
 #include "Snake.hpp"
+#include <memory>
 
 #define GRID_SIZE 31;
 
 class Game {
 public:
-	Snake snake;
-
 	void Reset();
+private:
+	std::shared_ptr<Snake> pSnake;
 };
