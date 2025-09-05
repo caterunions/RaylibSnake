@@ -5,7 +5,7 @@
 static const int ScreenWidth{ 800 };
 static const int ScreenHeight{ 450 };
 
-static Game GameInstance{ 0 };
+static Game GameInstance{ };
 
 void Draw();
 void Update();
@@ -43,5 +43,5 @@ void Draw() {
 }
 
 void InitGame() {
-    GameInstance = { 0 };
+    GameInstance.Reset();
 }
