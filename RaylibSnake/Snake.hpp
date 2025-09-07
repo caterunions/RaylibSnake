@@ -1,6 +1,8 @@
+#pragma once
+
 #include "Game.hpp"
 
-class Snake {
+class Snake : public GameObject {
 public:
 	Snake();
 	const int Length() const { return length; }

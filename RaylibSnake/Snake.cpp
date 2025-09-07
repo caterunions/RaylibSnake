@@ -1,5 +1,6 @@
 #include "Game.hpp"
 
 Snake::Snake() {
-	Length = 1;
+	length = 1;
+	direction = { 0, 0 };
 }
