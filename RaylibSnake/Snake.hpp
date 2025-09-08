@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Game.hpp"
 #include <vector>
 
 class Snake : public GameObject {

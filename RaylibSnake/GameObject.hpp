@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Game.hpp"
-
 class GameObject {
 public:
 	virtual void Update() = 0;
