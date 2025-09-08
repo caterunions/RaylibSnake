@@ -1,13 +1,26 @@
 #include "Game.hpp"
 
 void Game::Reset() {
-	pSnake = std::shared_ptr<Snake>(new Snake());
+	pSnake = std::shared_ptr<Snake>(new Snake(5));
 }
 
-void Update() {
+void Game::Update() {
+	if (IsKeyPressed(KEY_RIGHT)) {
+		pSnake->HandleMove({ 1, 0 });
+	}
+	else if (IsKeyPressed(KEY_LEFT)) {
+		pSnake->HandleMove({ -1, 0 });
+	}
+	else if (IsKeyPressed(KEY_UP)) {
+		pSnake->HandleMove({ 0, 1 });
+	}
+	else if (IsKeyPressed(KEY_DOWN)) {
+		pSnake->HandleMove({ 0, -1 });
+	}
 
+	pSnake->Update();
 }
 
-void Draw() {
-
+void Game::Draw() {
+	pSnake->Draw();
 }

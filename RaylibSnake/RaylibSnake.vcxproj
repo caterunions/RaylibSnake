@@ -128,11 +128,13 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="RaylibSnake.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="SnakeSegment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="Snake.hpp" />
+    <ClInclude Include="SnakeSegment.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
