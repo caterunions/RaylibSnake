@@ -1,9 +1,12 @@
 #include "Game.hpp"
+#include "Snake.hpp"
 
 Snake::Snake(const float& _tilesPerSecond) {
 	direction = { 1, 0 };
 	segments.push_back(SnakeSegment());
 	tilesPerSecond = _tilesPerSecond;
+	accumulatedDeltaTime = 0;
+	timeToMove = 1 / tilesPerSecond;
 }
 
 void Snake::Update() {
@@ -13,11 +16,18 @@ void Snake::Update() {
 		accumulatedDeltaTime -= timeToMove;
 		position.x += direction.x;
 		position.y += direction.y;
+
+		for (int i = 0; i < segments.size(); i++) {
+			if (i == 0) {
+				segments[i].SetPosition(position);
+			}
+			else segments[i].SetPosition(segments[i - 1].Position());
+		}
 	}
 }
 
 void Snake::Draw() {
-	for (SnakeSegment segment : this->segments) {
+	for (SnakeSegment segment : segments) {
 		segment.Draw();
 	}
 }

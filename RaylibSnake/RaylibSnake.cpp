@@ -31,13 +31,15 @@ int main()
 }
 
 void Update() {
-
+    GameInstance.Update();
 }
 
 void Draw() {
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
+
+    GameInstance.Draw();
 
     EndDrawing();
 }

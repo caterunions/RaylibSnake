@@ -12,10 +12,10 @@ void Game::Update() {
 		pSnake->HandleMove({ -1, 0 });
 	}
 	else if (IsKeyPressed(KEY_UP)) {
-		pSnake->HandleMove({ 0, 1 });
+		pSnake->HandleMove({ 0, -1 });
 	}
 	else if (IsKeyPressed(KEY_DOWN)) {
-		pSnake->HandleMove({ 0, -1 });
+		pSnake->HandleMove({ 0, 1 });
 	}
 
 	pSnake->Update();

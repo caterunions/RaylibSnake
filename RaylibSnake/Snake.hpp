@@ -1,6 +1,9 @@
 #pragma once
 
 #include <vector>
+#include <raylib.h>
+#include "GameObject.hpp"
+#include "SnakeSegment.hpp"
 
 class Snake : public GameObject {
 public:
@@ -14,5 +17,5 @@ private:
 	std::vector<SnakeSegment> segments{ };
 	float tilesPerSecond;
 	float accumulatedDeltaTime;
-	const float timeToMove{ 1 / tilesPerSecond };
+	float timeToMove;
 };
