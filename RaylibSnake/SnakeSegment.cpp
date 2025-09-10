@@ -14,5 +14,6 @@ void SnakeSegment::Draw() {
 }
 
 void SnakeSegment::SetPosition(const Vector2& pos) {
+	prevPosition = position;
 	position = pos;
 }

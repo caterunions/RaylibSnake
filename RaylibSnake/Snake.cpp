@@ -21,7 +21,7 @@ void Snake::Update() {
 			if (i == 0) {
 				segments[i].SetPosition(position);
 			}
-			else segments[i].SetPosition(segments[i - 1].Position());
+			else segments[i].SetPosition(segments[i - 1].PrevPosition());
 		}
 	}
 }
@@ -36,4 +36,11 @@ void Snake::HandleMove(const Vector2& moveInfo) {
 	if ((moveInfo.x == 0 && direction.y == 0) || (moveInfo.y == 0 && direction.x == 0)) {
 		direction = moveInfo;
 	}
+}
+
+void Snake::AddSegment() {
+	SnakeSegment back = segments.back();
+	SnakeSegment addition = SnakeSegment();
+	segments.push_back(addition);
+	addition.SetPosition(back.PrevPosition());
 }

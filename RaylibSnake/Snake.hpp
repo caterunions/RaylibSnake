@@ -12,6 +12,7 @@ public:
 	void Update() override;
 	void Draw() override;
 	void HandleMove(const Vector2&);
+	void AddSegment();
 private:
 	Vector2 direction;
 	std::vector<SnakeSegment> segments{ };

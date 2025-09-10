@@ -18,6 +18,10 @@ void Game::Update() {
 		pSnake->HandleMove({ 0, 1 });
 	}
 
+	if (IsKeyPressed(KEY_TAB)) {
+		pSnake->AddSegment();
+	}
+
 	pSnake->Update();
 }
 
